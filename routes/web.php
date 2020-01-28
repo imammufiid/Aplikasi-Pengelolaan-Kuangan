@@ -23,13 +23,6 @@ Route::get('/', function () {
 Route::get('/dashboard', 'HomeController@index')->name('dashboard');
 Route::get('/pemasukan', 'IncomesController@index')->name('incomes');
 Route::get('/pemasukan/dt_json', 'IncomesController@dt_json')->name('income.dt_json');
-// Route::get('/pemasukan/dt_json', 'IncomesController@json');
 
-// route untuk menangani ketika sudah ada data yang diinputkan
-// Route::post('/pemasukan', 'IncomesController@store');
-// Route::post('/income/delete/{id}', 'IncomesController@destroy');
-// Route::post('/pemasukan/{id}', 'IncomesController@show');
 Route::resource('/income', 'IncomesController');
 Auth::routes();
-// Route::post('/pemasukan/edit/{id}', 'IncomesController@edit');
-// Route::post('/dashboard', 'HomeController@postDashboard');

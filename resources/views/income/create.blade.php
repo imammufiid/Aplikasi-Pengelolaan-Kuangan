@@ -9,7 +9,7 @@
 
 <div class="card">
   <div class="card-header">
-    Tambah Pemasukkan
+    Pemasukkan
   </div>
   <form action="{{route('income.store')}}" method="POST">
   @csrf
