@@ -132,17 +132,11 @@
                                 <div class="row">
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                         <div class="slider-content">
-                                            <ul>
-                                                <li data-animation="animated bounceInDown" class="slider_social_icon1"><a href="index.html#"><i class="fa fa-facebook"></i></a></li>
-                                                <li data-animation="animated bounceInDown" class="slider_social_icon2"><a href="index.html#"><i class="fa fa-twitter"></i></a></li>
-                                                <li data-animation="animated bounceInDown" class="slider_social_icon3"><a href="index.html#"><i class="fa fa-send-o"></i></a></li>
-                                                <li data-animation="animated bounceInDown" class="slider_social_icon4"><a href="index.html#"><i class="fa fa-bitcoin"></i></a></li>
-                                                <li data-animation="animated bounceInDown" class="slider_social_icon5"><a href="index.html#"><i class="fa fa-envelope"></i></a></li>
-                                            </ul>
+                                            
                                             <h2 data-animation="animated bounceInLeft">DUWITKU - Lending & <br>Investment Platform</h2>
                                             <div class="buttons">
-                                                <a href="index.html#" class="btn1" data-animation="animated bounceInUp">WHITEPAPER</a>
-                                                <a href="index.html#" class="btn2" data-animation="animated bounceInUp">Buy Tokens Now!</a>
+                                                <a href="index.html#" class="btn1" data-animation="animated bounceInUp">Login</a>
+                                                <a href="index.html#" class="btn2" data-animation="animated bounceInUp">New Member</a>
                                             </div>
                                         </div>
                                     </div>
