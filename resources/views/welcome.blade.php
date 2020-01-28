@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Keuangan</title>
+    <title>Keuangan Duit</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" href="http://www.webstrot.com/html/bitmoney/landing_page_blue/apple-touch-icon.png">
