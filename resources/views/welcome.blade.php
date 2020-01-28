@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Keuangan Duit</title>
+    <title>Keuangan</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" href="http://www.webstrot.com/html/bitmoney/landing_page_blue/apple-touch-icon.png">
@@ -182,7 +182,7 @@
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                         <div class="btc_timer_section_wrapper">
-                            {{-- <div id="clockdiv">
+                            <div id="clockdiv">
                                 <div>
                                     <span class="days"></span>
                                     <div class="smalltext">Days</div>
@@ -199,7 +199,7 @@
                                     <span class="seconds"></span>
                                     <div class="smalltext">Seconds</div>
                                 </div>
-                            </div> --}}
+                            </div>
                         </div>
                     </div>
                 </div>
