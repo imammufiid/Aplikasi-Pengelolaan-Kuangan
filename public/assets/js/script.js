@@ -30,14 +30,14 @@ $(function () {
     //end of transaksi pemasukan===================================================================================================================
 
     // script untuk navigasi
-    $('#linkDashboard').on('click', function () {
-        // melakukan submit ketika klik tombol navigasi
-        $('#form-to-dashboard').submit();
-    });
-    $('#linkPemasukan').on('click', function () {
-        // melakukan submit ketika klik tombol navigasi
-        $('#form-to-pemasukan').submit();
-    });
+    // $('#linkDashboard').on('click', function () {
+    //     // melakukan submit ketika klik tombol navigasi
+    //     $('#form-to-dashboard').submit();
+    // });
+    // $('#linkPemasukan').on('click', function () {
+    //     // melakukan submit ketika klik tombol navigasi
+    //     $('#form-to-pemasukan').submit();
+    // });
 
 
 });

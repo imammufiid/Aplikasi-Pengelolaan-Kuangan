@@ -16,7 +16,7 @@
   <div class="card-body">
       <div class="form-group">
         <label for="">Tanggal</label>
-        <input type="text" class="form-control datepicker-exec @error('date') is-invalid @enderror" name="date" value="{{old('date')}}">
+        <input type="text" class="form-control datepicker-exec @error('date') is-invalid @enderror" name="date" id="tanggal" value="{{old('date')}}">
         @error('date')
           <span class="invalid-feedback" role="alert">
             <strong>{{ $message }}</strong>
