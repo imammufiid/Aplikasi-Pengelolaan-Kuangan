@@ -5,11 +5,6 @@ $(function () {
         currency: 'IDR'
     });
 
-    // script untuk datepicker
-    $('.datepicker-exec').datepicker({
-        format: "dd / mm / yyyy",
-        autoclose: true
-    });
 
     //transaksi pemasukan========================================================================================================
 
