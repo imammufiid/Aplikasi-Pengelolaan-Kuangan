@@ -114,7 +114,7 @@
                                                 <h2 data-animation="animated bounceInLeft">DUWITKU - Lending & <br>Investment Platform</h2>
                                                 <div class="buttons">
                                                     <a href="{{route('login')}}" class="btn1" data-animation="animated bounceInUp">Login</a>
-                                                    <a href="{{route('registerk')}}" class="btn2" data-animation="animated bounceInUp">New Member</a>
+                                                    <a href="{{route('register')}}" class="btn2" data-animation="animated bounceInUp">New Member</a>
                                                 </div>
                                             </div>
                                         </div>

@@ -78,3 +78,12 @@
   </div>
 </div>
 @endsection
+
+@section('js')
+    <script>
+    // script untuk datepicker
+    $('.datepicker-exec').datepicker({
+        format: "dd / mm / yyyy",
+        autoclose: true
+    });</script>
+@endsection
