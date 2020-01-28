@@ -182,7 +182,7 @@
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                         <div class="btc_timer_section_wrapper">
-                            <div id="clockdiv">
+                            {{-- <div id="clockdiv">
                                 <div>
                                     <span class="days"></span>
                                     <div class="smalltext">Days</div>
@@ -199,7 +199,7 @@
                                     <span class="seconds"></span>
                                     <div class="smalltext">Seconds</div>
                                 </div>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                 </div>
