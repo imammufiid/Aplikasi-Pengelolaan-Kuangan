@@ -52,7 +52,7 @@
                         <div class="logo-area">
                             {{-- <a href="index.html"><img src="#" alt="logo"/> --}}
                                 
-                                <h2 style="color: #eee"><i class="fa fa-dollar-sign"></i> &nbsp; DUWITKU</h2>
+                                <h2 style="color: #eee">&nbsp;<i class="fa fa-dollar-sign rotate-n-15"></i>&nbsp;DUWITKU</h2>
                             </a>
                         </div>
                     </div>
