@@ -21,11 +21,13 @@ Route::get('/', function () {
 });
 
 // route untuk menangani ketika belum ada data yang diinputkan
-Route::get('/dashboard', 'HomeController@index')->name('dashboard');
-Route::get('/pemasukan', 'IncomesController@index')->name('incomes');
-Route::get('/user', 'UserController@index')->name('user');
-Route::get('/pemasukan/dt_json', 'IncomesController@dt_json')->name('income.dt_json');
+Route::group(['middleware' => 'auth'], function(){
+    Route::get('/dashboard', 'HomeController@index')->name('dashboard');
+    Route::get('/pemasukan', 'IncomesController@index')->name('incomes');
+    Route::get('/user', 'UserController@index')->name('user');
 
-Route::resource('/income', 'IncomesController');
-Route::resource('/users', 'UserController');
+    Route::resource('/income', 'IncomesController');
+    Route::resource('/users', 'UserController');
+});
 Auth::routes();
+
