@@ -169,9 +169,37 @@
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                         <div class="about-content">
                             <h2 class="f-40 fw-400 wow  fadeIn animated" data-wow-duration="1.0s" style="visibility: visible; animation-duration: 1.0s; animation-name: fadeIn;">About The Project</h2>
-                            <p class="wow  fadeIn animated" data-wow-duration="1.3s" style="visibility: visible; animation-duration: 1.3s; animation-name: fadeIn;">Bit Money is a lending and investment, multicurrency and multifunctional online platform based on blockchain technology. There investors and borrowers meet each other and have the opportunity to lend money on mutually beneficial.</p>
-                            <p class="wow  fadeIn animated" data-wow-duration="1.6s" style="visibility: visible; animation-duration: 1.6s; animation-name: fadeIn;">Bit Money is a unique service that allows individuals to access loans from the comfort of their home in fiat currencies or crypto-currencies.</p>
-                            <p class="wow  fadeIn animated" data-wow-duration="1.9s" style="visibility: visible; animation-duration: 1.9s; animation-name: fadeIn;">Bit Money is a multi-functional platform which allows each participant to keep money in a multi-currency online wallet, buy and sell currency on the exchange, invest money, get a loan in a convenient currency.</p>
+                            <p class="wow  fadeIn animated" data-wow-duration="1.3s" style="visibility: visible; animation-duration: 1.3s; animation-name: fadeIn;">Project ini adalah project UAS matakuliah Pemrograman Web Lanjut. Dimana dalam pembuatan project ini menggunakan framework LARAVEL versi 6.</p>
+                            <p class="wow  fadeIn animated" data-wow-duration="1.6s" style="visibility: visible; animation-duration: 1.6s; animation-name: fadeIn;">Beberapa teknologi yang dipakai di project ini adalah VSCode sebagai text Editor, Composer sebagai Package Manager, Framework Laravel, Git sebagai version control.</p>
+                            <p class="wow  fadeIn animated" data-wow-duration="1.9s" style="visibility: visible; animation-duration: 1.9s; animation-name: fadeIn;">Anggota Team :
+                                <table border="0">
+                                    <tr>
+                                        <td>1.</td>
+                                        <td><b>Imam Mufiid</b></td>
+                                        <td> </td>
+                                        <td>(17104410005)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2.</td>
+                                        <td><b>Eko Teguh Wicaksono</b></td>
+                                        <td> </td>
+                                        <td>(17104410001)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3.</td>
+                                        <td><b>Agung Hasbi Ardiansyah</b></td>
+                                        <td> </td>
+                                        <td>(17104410031)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4.</td>
+                                        <td><b>M. Fuad Hasan</b></td>
+                                        <td> </td>
+                                        <td>(xx1044100xx)</td>
+                                    </tr>
+                                </table>
+                            
+                            </p>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
