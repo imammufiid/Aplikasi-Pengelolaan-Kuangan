@@ -11,7 +11,6 @@
   <div class="card-header">
     Tambah Pemasukkan
   </div>
-  <?php dd($income)?>
   <form action="{{route('income.update', $income->id)}}" method="POST">
   @csrf
   @method('PUT')

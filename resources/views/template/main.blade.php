@@ -72,7 +72,7 @@
        <!-- Nav Item - User -->
        <li class="nav-item  @if ($title == "User") active @endif">
         <a class="nav-link" href="{{route('user')}}" id="linkUser">
-            <i class="fas fa-fw fa-money-bill-wave"></i>
+            <i class="fas fa-user"></i>
             <span>USER</span></a>
         </li>
 
