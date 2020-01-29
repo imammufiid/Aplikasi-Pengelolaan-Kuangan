@@ -118,8 +118,6 @@ class IncomesController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'date' => 'required',
-            'asset_id' => 'required',
-            'account_id' => 'required',
             'total' => 'required|numeric',
             'info' => 'required',
         ]);
@@ -142,15 +140,6 @@ class IncomesController extends Controller
      */
     public function destroy(Income $income)
     {
-        // // dd($id);
-        // $res = Income::where('id', $id)->delete();
-        // // dd($res);
-        // if($res == true){
-        //     $response = ['msg' => 'Berhasil', 'info' => 'Berhasil Menghapus Data', 'icon' => 'success', 'status' => 1];
-        // } else {
-        //     $response = ['msg' => 'Gagal', 'info' => 'Gagal Menghapus Data', 'icon' => 'error', 'status' => 0];
-        // }
-        // return $response;
         $income->delete();
         return redirect()
                 ->route('income.index')
