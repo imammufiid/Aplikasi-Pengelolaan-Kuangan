@@ -234,7 +234,7 @@ owl active
 
 
 // CountDown Js
-	var deadline = 'september 1 2018 11:59:00 GMT-0400';
+	var deadline = 'februari 1 2020 11:59:00 GMT+0700';
 		function time_remaining(endtime){
 			var t = Date.parse(endtime) - Date.parse(new Date());
 			var seconds = Math.floor( (t/1000) % 60 );
