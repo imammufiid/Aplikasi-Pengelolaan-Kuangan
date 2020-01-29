@@ -9,6 +9,14 @@ use Illuminate\Support\Facades\Validator;
 
 class UserController extends Controller
 {
+    public function __construct(){
+        //lakukan cek dahulu, user harus login
+        // $this->middleware('auth'); 
+        
+        //lakukan cek dahulu, user harus level admin
+        // $this->middleware('admin');
+    }
+
     /**
      * Display a listing of the resource.
      *
