@@ -28,7 +28,7 @@
         <select type="text" class="form-control @error('assets') is-invalid @enderror" name="assets" value="{{old('assets')}}">
           <option value selected disabled>-- Pilih --</option>
           @foreach ($accounts as $account)
-            <option value="{{$account->kode}}">{{$account->kode. ' - '.$account->account}}</option>  
+            <option value="{{$account->id}}">{{$account->kode. ' - '.$account->account}}</option>  
           @endforeach
         </select>
         @error('asset')
@@ -42,7 +42,7 @@
         <select type="text" class="form-control @error('accounts') is-invalid @enderror" name="accounts" value="{{old('accounts')}}">
           <option value selected disabled>-- Pilih --</option>
           @foreach ($assets as $asset)
-            <option value="{{$asset->kode}}">{{$asset->kode. ' - '.$asset->asset}}</option>  
+            <option value="{{$asset->id}}">{{$asset->kode. ' - '.$asset->asset}}</option>  
           @endforeach
         </select>
         @error('account')
