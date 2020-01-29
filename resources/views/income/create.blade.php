@@ -25,13 +25,13 @@
       </div>
       <div class="form-group">
         <label for="">Aset</label>
-        <select type="text" class="form-control @error('assets') is-invalid @enderror" name="assets" value="{{old('assets')}}">
+        <select type="text" class="form-control @error('account_id') is-invalid @enderror" name="account_id" >
           <option value selected disabled>-- Pilih --</option>
           @foreach ($accounts as $account)
-            <option value="{{$account->kode}}">{{$account->kode. ' - '.$account->account}}</option>  
+            <option value="{{$account->id}}">{{$account->kode. ' - '.$account->account}}</option>  
           @endforeach
         </select>
-        @error('asset')
+        @error('account_id')
           <span class="invalid-feedback" role="alert">
             <strong>{{ $message }}</strong>
           </span>
@@ -39,13 +39,13 @@
       </div>
       <div class="form-group">
         <label for="">Akun</label>
-        <select type="text" class="form-control @error('accounts') is-invalid @enderror" name="accounts" value="{{old('accounts')}}">
+        <select type="text" class="form-control @error('asset_id') is-invalid @enderror" name="asset_id" ">
           <option value selected disabled>-- Pilih --</option>
           @foreach ($assets as $asset)
-            <option value="{{$asset->kode}}">{{$asset->kode. ' - '.$asset->asset}}</option>  
+            <option value="{{$asset->id}}">{{$asset->kode. ' - '.$asset->asset}}</option>  
           @endforeach
         </select>
-        @error('account')
+        @error('asset_id')
           <span class="invalid-feedback" role="alert">
             <strong>{{ $message }}</strong>
           </span>

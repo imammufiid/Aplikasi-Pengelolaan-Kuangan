@@ -28,12 +28,13 @@
         </tr>
       </thead>
       <tbody>
+        
         @foreach ($income as $val)
           <tr>
             <td>{{$loop->iteration}}</td>
             <td>{{$val->date}}</td>
-            <td>{{$val->assets}}</td>
-            <td>{{$val->accounts}}</td>
+            <td>{{$val->asset_id}}</td>
+            <td>{{$val->account_id}}</td>
             <td>{{$val->total}}</td>
             <td>{{$val->info}}</td>
             <td>
