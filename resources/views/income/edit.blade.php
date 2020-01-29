@@ -30,7 +30,7 @@
         <select type="text" class="form-control @error('assets') is-invalid @enderror" name="assets" value="{{old('assets')}}">
           <option value selected disabled>-- Pilih --</option>
           @foreach ($accounts as $account)
-            <option value="{{$account->kode}}" @if ($income->assets == $account->kode)
+            <option value="{{$account->id}}" @if ($income->asset_id == $account->id)
                 {{ "selected" }}
             @endif >{{$account->kode. ' - '.$account->account}}</option>  
           @endforeach
@@ -46,7 +46,7 @@
         <select type="text" class="form-control @error('accounts') is-invalid @enderror" name="accounts" value="{{old('accounts')}}">
           <option value selected disabled>-- Pilih --</option>
           @foreach ($assets as $asset)
-            <option value="{{$asset->kode}}" @if ($income->accounts == $asset->kode)
+            <option value="{{$asset->id}}" @if ($income->account_id == $asset->id)
                 {{"selected"}}
             @endif >{{$asset->kode. ' - '.$asset->asset}}</option>  
           @endforeach

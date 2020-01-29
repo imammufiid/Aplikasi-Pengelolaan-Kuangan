@@ -62,41 +62,10 @@ class IncomesController extends Controller
      */
     public function store(Request $request)
     {
-        // $id = $request->id;
-        // if($id == 0){
-        //     $income = new Income;
-        //     $income->date = $request->tanggal;
-        //     $income->assets = $request->terimaDari;
-        //     $income->accounts = $request->simpanKe;
-        //     $income->total = $request->jumlah;
-        //     $income->info = $request->keterangan;
-    
-        //     $res = $income->save();
-        //     // $res = Income::create($request->all());
-        //     if($res == true){
-        //         $response = ['msg' => 'Berhasil', 'info' => 'Berhasil Menambah Data', 'icon' => 'success'];
-        //     } else {
-        //         $response = ['msg' => 'Gagal', 'info' => 'Gagal Menambah Data', 'icon' => 'error'];
-        //     }
-        // } else {
-        //     $res = Income::where('id', $id)->update([
-        //         'date' => $request->tanggal,
-        //         'assets' => $request->terimaDari,
-        //         'accounts' => $request->simpanKe,
-        //         'total' => $request->jumlah,
-        //         'info' => $request->keterangan,
-        //     ]);
-        //     if($res == true){
-        //         $response = ['msg' => 'Berhasil', 'info' => 'Berhasil Mengubah Data', 'icon' => 'success'];
-        //     } else {
-        //         $response = ['msg' => 'Gagal', 'info' => 'Gagal Mengubah Data', 'icon' => 'error'];
-        //     }
-        // }
-        // return $response;
+        // print_r($request);die();
+        // dd($_POST);
         $validator = Validator::make($request->all(), [
             'date' => 'required',
-            'assets' => 'required',
-            'accounts' => 'required',
             'total' => 'required|numeric',
             'info' => 'required',
         ]);
@@ -149,8 +118,8 @@ class IncomesController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'date' => 'required',
-            'assets' => 'required',
-            'accounts' => 'required',
+            'asset_id' => 'required',
+            'account_id' => 'required',
             'total' => 'required|numeric',
             'info' => 'required',
         ]);
