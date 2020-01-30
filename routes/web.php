@@ -20,7 +20,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// route untuk menangani ketika belum ada data yang diinputkan
+// route untuk menangani middleware auth
+// jika auth berhasil maka route di
+// dalamnya bisa diakses
 Route::group(['middleware' => 'auth'], function(){
     Route::get('/dashboard', 'HomeController@index')->name('dashboard');
     Route::get('/pemasukan', 'IncomesController@index')->name('incomes');
