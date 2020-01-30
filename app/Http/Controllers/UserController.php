@@ -74,7 +74,7 @@ class UserController extends Controller
     public function edit(UserModel $user)
     {
         $title = 'Edit User';
-        $user = UserModel::all();
+        // $user = UserModel::all();
         return view('user.edit', compact('title', 'user'));
     }
 

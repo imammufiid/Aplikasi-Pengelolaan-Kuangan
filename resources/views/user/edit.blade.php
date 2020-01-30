@@ -13,13 +13,13 @@
     Edit User
   </div>
   
-  <form action="{{route('users.update', $user[0]->id)}}" method="POST">
+  <form action="{{route('users.update', $user->id)}}" method="POST">
   @csrf
   @method('PUT')
   <div class="card-body">
       <div class="form-group">
         <label for="">Nama</label>
-        <input type="text" class="form-control @error('name') is-invalid @enderror" value="{{$user[0]->name}}" name="name">
+        <input type="text" class="form-control @error('name') is-invalid @enderror" value="{{$user->name}}" name="name">
         @error('name')
           <span class="invalid-feedback" role="alert">
             <strong>{{ $message }}</strong>
