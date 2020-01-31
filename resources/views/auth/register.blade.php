@@ -19,6 +19,8 @@
                 </div>
                 <form class="user" method="POST" action="{{ route('register') }}">
                   @csrf
+                  <input type="hidden" name="role" value="user">
+                  <input type="hidden" name="status" value="1">
                   <div class="form-group">
                     <input type="text" name="name" class="form-control form-control-user @error('name') is-invalid @enderror" id="name" aria-describedby="nameHelp" value="{{ old('name') }}" placeholder="Enter name Address..." required autocomplete="name" autofocus>
                     @error('name')

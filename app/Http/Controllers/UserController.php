@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use Illuminate\Http\Request;
 
 use App\UserModel;
@@ -10,11 +11,11 @@ use Illuminate\Support\Facades\Validator;
 class UserController extends Controller
 {
     public function __construct(){
-        //lakukan cek dahulu, user harus login
-        // $this->middleware('auth'); 
+        // lakukan cek dahulu, user harus login
+        $this->middleware('auth'); 
         
-        //lakukan cek dahulu, user harus level admin
-        // $this->middleware('admin');
+        // lakukan cek dahulu, user harus level admin
+        $this->middleware('admin');
     }
 
     /**
@@ -85,11 +86,14 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, UserModel $user)
+    public function update($id, Request $request)
     {
+        $user = User::findOrFail($id);
+        // dd($request);
         $validator = Validator::make($request->all(), [
             'name' => 'required',
-
+            'role' => 'required|in:admin,user',
+            'status' => 'required|in:1,0',
         ]);
 
         if ($validator->fails()) {

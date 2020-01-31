@@ -15,7 +15,7 @@
           <th scope="col" class="text-center" style="width:5%">#</th>
           <th scope="col" class="text-center" style="width:10%">Nama</th>
           <th scope="col" class="text-center" style="width:10%">Email</th>
-          <th scope="col" class="text-center" style="width:10%">Verifikasi</th>
+          <th scope="col" class="text-center" style="width:10%">Role</th>
           <th scope="col" class="text-center" style="width:10%">Dibuat Pada</th>
           <th scope="col" class="text-center" style="width:10%">Status</th>
 
@@ -30,9 +30,25 @@
             <td>{{$loop->iteration}}</td>
             <td>{{$val->name}}</td>
             <td>{{$val->email}}</td>
-            <td>{{$val->email_verified_at}}</td>
+            @if ($val->role == "admin")
+              <td>
+                <h3><span class="badge badge-primary">ADMIN</span></h3>
+              </td>
+            @else
+            <td>
+              <h3><span class="badge badge-warning">USER</span></h3>
+            </td>
+            @endif
             <td>{{$val->created_at}}</td>
-            <td>{{$val->remember_token}}</td>
+            @if ($val->status == 1)
+              <td>
+                <h3><span class="badge badge-success">AKTIF</span></h3>
+              </td>
+            @else
+            <td>
+              <h3><span class="badge badge-danger">BANNED</span></h3>
+            </td>
+            @endif
             <td>
               <form action="{{route('users.destroy', $val->id)}}" method="POST">
                 {{-- @if (Auth::check()) --}}

@@ -63,19 +63,24 @@
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>DASHBOARD</span></a>
       </li>
+      @if (Auth::check() && Auth::user()->role == 'user')
       <!-- Nav Item - Pemasukan -->
       <li class="nav-item  @if ($title == "Pemasukan") active @endif">
       <a class="nav-link" href="{{route('incomes')}}" id="linkPemasukan">
           <i class="fas fa-fw fa-money-bill-wave"></i>
           <span>PEMASUKAN</span></a>
       </li>
+      @endif
        <!-- Nav Item - User -->
+       @if (Auth::check() && Auth::user()->role == 'admin')
+           
        <li class="nav-item  @if ($title == "User") active @endif">
         <a class="nav-link" href="{{route('user')}}" id="linkUser">
             <i class="fas fa-user"></i>
             <span>USER</span>
         </a>
-        </li>
+    </li>
+    @endif
        <li class="nav-item">
         <a class="nav-link" href="{{route('logout')}}" id="linkUser" onclick="event.preventDefault();
         document.getElementById('logout-form').submit();">
