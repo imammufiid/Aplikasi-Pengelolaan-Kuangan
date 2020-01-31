@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\DB;
 // use DataTables;
 
 use App\Income;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 
 class IncomesController extends Controller
@@ -21,10 +22,9 @@ class IncomesController extends Controller
     public function index()
     {
         $title = 'Pemasukan';
-
-        //-- no serverside datatable
-        $income = Income::all();
-        //--
+        $user = Auth::user();
+        // dd($user->id);
+        $income = Income::where('user_id', '=', $user->id)->get();
 
         return view('income.index', compact('title', 'income'));
     }
@@ -62,7 +62,7 @@ class IncomesController extends Controller
      */
     public function store(Request $request)
     {
-        // print_r($request);die();
+        // dd($request);
         // dd($_POST);
         $validator = Validator::make($request->all(), [
             'date' => 'required',

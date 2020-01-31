@@ -14,6 +14,7 @@
   <form action="{{route('income.update', $income->id)}}" method="POST">
   @csrf
   @method('PUT')
+  <input type="hidden" name="user_id" value="{{Auth::user()->id}}">
   <div class="card-body">
       <div class="form-group">
         <label for="">Tanggal</label>

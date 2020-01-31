@@ -13,6 +13,7 @@
   </div>
   <form action="{{route('income.store')}}" method="POST">
   @csrf
+  <input type="hidden" name="user_id" value="{{Auth::user()->id}}">
   <div class="card-body">
       <div class="form-group">
         <label for="">Tanggal</label>
