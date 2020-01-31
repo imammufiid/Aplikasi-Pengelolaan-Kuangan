@@ -2,6 +2,7 @@
 
 @section('content')
 <!-- Page Heading -->
+{{-- {{print_r(Auth::user())}} --}}
 <div class="row">
     <div class="col-6">
         <h1 class="h3 mb-4 text-gray-800">Dashboard</h1>
