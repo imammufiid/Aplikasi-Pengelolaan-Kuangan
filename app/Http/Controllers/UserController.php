@@ -39,7 +39,8 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        $title = 'Tambah User';
+        return view('user.create', compact('title'));
     }
 
     /**
@@ -50,7 +51,29 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+
+        $validasi = Validator::make($data, [
+            'name'     => 'required|max:255',
+            'email'    => 'required|email|max:100|unique:users',
+            'password' => 'required|confirmed|min:6',
+            'role'     => 'required|in:user,admin',
+            'status'   => 'required|in:1,0'
+        ]);
+
+        if ($validasi->fails()) {
+            return redirect('users/create')
+                    ->withInput()
+                    ->withErrors($validasi);
+        }
+
+        // Hash password.
+        $data['password'] = bcrypt($data['password']);
+
+        User::create($data);
+        return redirect()
+                ->route('users.index')
+                ->with('success','User berhasil ditambahkan');
     }
 
     /**
