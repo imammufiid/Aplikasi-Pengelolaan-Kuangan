@@ -70,6 +70,12 @@
           <i class="fas fa-fw fa-money-bill-wave"></i>
           <span>PEMASUKAN</span></a>
       </li>
+      <!-- Nav Item - Pengeluaran -->
+      <li class="nav-item  @if ($title == "Pengeluaran") active @endif">
+        <a class="nav-link" href="{{route('spendings')}}" id="linkPengeluaran">
+            <i class="fas fa-fw fa-money-bill-wave"></i>
+            <span>PENGELUARAN</span></a>
+        </li>
       @endif
        <!-- Nav Item - User -->
        @if (Auth::check() && Auth::user()->role == 'admin')
