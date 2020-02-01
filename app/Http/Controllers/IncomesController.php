@@ -29,7 +29,8 @@ class IncomesController extends Controller
         $title = 'Pemasukan';
         $user = Auth::user();
         // dd($user->id);
-        $income = Income::where('user_id', '=', $user->id)->get();
+        // $income = Income::where('user_id', '=', $user->id)->get();
+        $income = Income::with('user', 'asset', 'account')->get();
 
         return view('income.index', compact('title', 'income'));
     }
@@ -120,22 +121,30 @@ class IncomesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Income $income)
+    public function update($id, Request $request)
     {
-        $validator = Validator::make($request->all(), [
+        // dd($request);
+        $income = Income::findOrFail($id);
+        $data = $request->all();
+
+        $validasi = Validator::make($data, [
             'date' => 'required',
             'total' => 'required|numeric',
             'info' => 'required',
         ]);
 
-        if ($validator->fails()) {
-            return back()->withInput($request->all())->withErrors($validator);
-        } else {
-            $income->update($request->all());
-            return redirect()
-                ->route('income.index')
-                ->with('success', 'Pemasukkan Berhasil Diubah');
+        if ($validasi->fails()) {
+            return redirect("income/$id/edit")
+                    ->withErrors($validasi)
+                    ->withInput();
         }
+
+        
+        $income->update($data);
+        
+        return redirect()
+            ->route('income.index')
+            ->with('success','User berhasil diupdate');
     }
 
     /**
