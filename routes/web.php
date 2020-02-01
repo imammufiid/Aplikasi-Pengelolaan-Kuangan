@@ -26,12 +26,8 @@ Route::get('/', function () {
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/dashboard', 'HomeController@index')->name('dashboard');
     Route::get('/pemasukan', 'IncomesController@index')->name('incomes');
-<<<<<<< HEAD
-    // Route::get('/user', 'UserController@index')->name('user');
-=======
     Route::get('/pengeluaran', 'SpendingsController@index')->name('spendings');
     Route::get('/user', 'UserController@index')->name('user');
->>>>>>> 4ba8d15513de58781be8970e0d9e8528821faea5
 
     Route::resource('/income', 'IncomesController');
     Route::resource('/spending', 'SpendingsController');
