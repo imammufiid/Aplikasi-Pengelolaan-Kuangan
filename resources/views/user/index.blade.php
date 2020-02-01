@@ -1,7 +1,11 @@
 @extends('template/main')
 
 @section('content')
-
+<div class="row">
+  <div class="col-lg-3 mb-4">
+  <a href="{{route('users.create')}}" class="btn btn-primary" id="tambahPengeluaran">Tambah User</a>
+  </div>
+</div>
 <!-- <div class="tabel-user" style="max-width: 1200p"> -->
 @if ($message = Session::get('success'))
   <div class="alert alert-success">
