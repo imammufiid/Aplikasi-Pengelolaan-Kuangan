@@ -4,13 +4,14 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Keuangan</title>
+    <title>Duwitku</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" href="http://www.webstrot.com/html/bitmoney/landing_page_blue/apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
     <!-- all css here -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" class="js-site-favicon" href="{{asset('assets/img/money.ico')}}">
     
     <!-- bootstrap v3.3.6 css -->
     <link rel="stylesheet" href="{{asset('assets_home/css/bootstrap.min.css')}}">
