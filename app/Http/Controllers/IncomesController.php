@@ -19,6 +19,11 @@ class IncomesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct()
+    {
+        $this->middleware('user');
+    }
+
     public function index()
     {
         $title = 'Pemasukan';
@@ -29,12 +34,14 @@ class IncomesController extends Controller
         return view('income.index', compact('title', 'income'));
     }
 
-    public function dt_json(){
+    public function dt_json()
+    {
         return datatables()->of(Income::all())
-        ->addIndexColumn()->make(true);
+            ->addIndexColumn()->make(true);
     }
 
-    public function json(){
+    public function json()
+    {
         $income = Income::all();
         return response()->json([
             'income' => $income
@@ -70,7 +77,7 @@ class IncomesController extends Controller
             'info' => 'required',
         ]);
 
-        if($validator->fails()){
+        if ($validator->fails()) {
             return back()->withInput($request->all())->withErrors($validator);
         } else {
             Income::create($request->all());
@@ -89,7 +96,6 @@ class IncomesController extends Controller
     public function show($id)
     {
         return Income::findOrFail($id);
-        
     }
 
     /**
@@ -122,7 +128,7 @@ class IncomesController extends Controller
             'info' => 'required',
         ]);
 
-        if($validator->fails()){
+        if ($validator->fails()) {
             return back()->withInput($request->all())->withErrors($validator);
         } else {
             $income->update($request->all());
@@ -142,7 +148,7 @@ class IncomesController extends Controller
     {
         $income->delete();
         return redirect()
-                ->route('income.index')
-                ->with('success','Income berhasil dihapus');
+            ->route('income.index')
+            ->with('success', 'Income berhasil dihapus');
     }
 }

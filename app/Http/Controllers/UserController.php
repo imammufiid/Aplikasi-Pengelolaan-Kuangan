@@ -10,10 +10,8 @@ use Illuminate\Support\Facades\Validator;
 
 class UserController extends Controller
 {
-    public function __construct(){
-        // lakukan cek dahulu, user harus login
-        $this->middleware('auth'); 
-        
+    public function __construct()
+    {
         // lakukan cek dahulu, user harus level admin
         $this->middleware('admin');
     }

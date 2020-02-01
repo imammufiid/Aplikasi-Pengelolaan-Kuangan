@@ -23,14 +23,16 @@ Route::get('/', function () {
 // route untuk menangani middleware auth
 // jika auth berhasil maka route di
 // dalamnya bisa diakses
+Auth::routes();
 Route::group(['middleware' => 'auth'], function () {
+
+    Route::get('/dashboard', 'HomeController@index')->name('dashboard');
+    Route::get('/user', 'UserController@index')->name('user');
+    Route::resource('/users', 'UserController');
+
     Route::get('/dashboard', 'HomeController@index')->name('dashboard');
     Route::get('/pemasukan', 'IncomesController@index')->name('incomes');
     Route::get('/pengeluaran', 'SpendingsController@index')->name('spendings');
-    Route::get('/user', 'UserController@index')->name('user');
-
     Route::resource('/income', 'IncomesController');
     Route::resource('/spending', 'SpendingsController');
-    Route::resource('/users', 'UserController');
 });
-Auth::routes();
