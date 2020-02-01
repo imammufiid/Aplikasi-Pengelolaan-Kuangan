@@ -26,7 +26,7 @@ Route::get('/', function () {
 Route::group(['middleware' => 'auth'], function(){
     Route::get('/dashboard', 'HomeController@index')->name('dashboard');
     Route::get('/pemasukan', 'IncomesController@index')->name('incomes');
-    Route::get('/user', 'UserController@index')->name('user');
+    // Route::get('/user', 'UserController@index')->name('user');
 
     Route::resource('/income', 'IncomesController');
     Route::resource('/users', 'UserController');
