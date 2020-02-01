@@ -27,7 +27,7 @@
       </div>
       <div class="form-group">
         <label for="">Aset</label>
-        <select type="text" class="form-control @error('accounts') is-invalid @enderror" name="accounts" value="{{old('accounts')}}">
+        <select type="text" class="form-control @error('asset_id') is-invalid @enderror" name="asset_id" value="{{old('asset_id')}}">
           <option value selected disabled>-- Pilih --</option>
           @foreach ($assets as $asset)
             <option value="{{$asset->id}}" @if ($spending->asset_id == $asset->id)
