@@ -30,7 +30,7 @@ class IncomesController extends Controller
         $user = Auth::user();
         // dd($user->id);
         // $income = Income::where('user_id', '=', $user->id)->get();
-        $income = Income::with('user', 'asset', 'account')->get();
+        $income = Income::with('user', 'asset', 'account')->where('user_id', '=', $user->id)->get();
 
         return view('income.index', compact('title', 'income'));
     }
