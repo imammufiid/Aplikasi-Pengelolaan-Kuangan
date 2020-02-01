@@ -29,8 +29,10 @@ class SpendingsController extends Controller
         $user = Auth::user();
         // dd($user->id);
         $spending = Spending::where('user_id', '=', $user->id)->get();
-
-        return view('spending.index', compact('title', 'spending'));
+        foreach ($spending as $key) {
+            $nama_asset[] = Spending::nama_asset($key->id, $user->id);
+        }
+        return view('spending.index', compact('title', 'spending', 'nama_asset'));
     }
 
     public function dt_json()

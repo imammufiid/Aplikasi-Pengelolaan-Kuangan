@@ -29,28 +29,33 @@
       <tbody>
         
         @foreach ($spending as $val)
-          <tr>
-            <td>{{$loop->iteration}}</td>
-            <td>{{$val->date}}</td>
-            <td>{{$val->asset_id}}</td>
-            <td>{{$val->total}}</td>
-            <td>{{$val->info}}</td>
-            <td>
-              <form action="{{route('spending.destroy', $val->id)}}" method="POST">
-                {{-- @if (Auth::check()) --}}
-                  <a class="btn btn-success btn-sm" href="{{ route('spending.edit', $val->id) }}">
-                    <i class="fa fa-edit"></i>
-                  </a>
-                  @csrf
-                  @method('DELETE')
-                  <button class="btn btn-danger btn-sm" onclick="return confirm('Apakah anda yakin?')">
-                    <i class="fa fa-trash"></i>
-                  </button>
-                {{-- @endif --}}
-              </form>
-            </td>
-          </tr>
+        @foreach ($nama_asset as $nama)
+        @if ($val->asset_id == $nama->asset_id)
+        <tr>
+          <td>{{$loop->iteration}}</td>
+          <td>{{$val->date}}</td>
+          <td> {{$nama->asset}}</td>
+          <td>{{$val->total}}</td>
+          <td>{{$val->info}}</td>
+          <td>
+            <form action="{{route('spending.destroy', $val->id)}}" method="POST">
+              {{-- @if (Auth::check()) --}}
+                <a class="btn btn-success btn-sm" href="{{ route('spending.edit', $val->id) }}">
+                  <i class="fa fa-edit"></i>
+                </a>
+                @csrf
+                @method('DELETE')
+                <button class="btn btn-danger btn-sm" onclick="return confirm('Apakah anda yakin?')">
+                  <i class="fa fa-trash"></i>
+                </button>
+              {{-- @endif --}}
+            </form>
+          </td>
+        </tr>
+        @endif
         @endforeach
+        @endforeach
+        
       </tbody>
     </table>
 </div>
