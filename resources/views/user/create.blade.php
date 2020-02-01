@@ -1,0 +1,87 @@
+@extends('template/main')
+
+@section('content')
+
+<div class="row">
+  <div class="col-lg-3 mb-4">
+    <a href="{{route('users.index')}}" class="btn btn-success" id="editUser">Kembali</a>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    Edit User
+  </div>
+
+  <form action="{{route('users.store')}}" method="POST">
+    @csrf
+    <div class="card-body">
+      <div class="form-group">
+        <label for="">Nama</label>
+        <input type="text" class="form-control @error('name') is-invalid @enderror" value="{{old('name')}}" name="name">
+        @error('name')
+        <span class="invalid-feedback" role="alert">
+          <strong>{{ $message }}</strong>
+        </span>
+        @enderror
+      </div>
+      <div class="form-group">
+        <label for="">Email</label>
+        <input type="text" class="form-control @error('email') is-invalid @enderror" value="{{old('email')}}" name="email">
+        @error('email')
+        <span class="invalid-feedback" role="alert">
+          <strong>{{ $message }}</strong>
+        </span>
+        @enderror
+      </div>
+      <div class="form-group">
+        <label for="">Role</label>
+        <select name="role" id="role" class="form-control @error('role') is-invalid @enderror">
+          <option value="admin">Admin</option>
+          <option value="user">User</option>
+        </select>
+        @error('role')
+        <span class="invalid-feedback" role="alert">
+          <strong>{{ $message }}</strong>
+        </span>
+        @enderror
+      </div>
+      <div class="form-group">
+        <label for="">Status</label>
+        <select name="status" id="status" class="form-control @error('status') is-invalid @enderror">
+          <option value="1">Aktif</option>
+          <option value="0">Non-Aktif</option>
+        </select>
+        @error('status')
+        <span class="invalid-feedback" role="alert">
+          <strong>{{ $message }}</strong>
+        </span>
+        @enderror
+      </div>
+      <div class="form-group">
+        <label for="">Password</label>
+        <input type="password" class="form-control @error('password') is-invalid @enderror" value="{{old('password')}}" name="password">
+        @error('password')
+        <span class="invalid-feedback" role="alert">
+          <strong>{{ $message }}</strong>
+        </span>
+        @enderror
+      </div>
+      <div class="form-group">
+        <label for="">Confirm Password</label>
+        <input type="password" class="form-control @error('password_confirmation') is-invalid @enderror" value="{{old('password_confirmation')}}"
+          name="password_confirmation">
+        @error('password_confirmation')
+        <span class="invalid-feedback" role="alert">
+          <strong>{{ $message }}</strong>
+        </span>
+        @enderror
+      </div>
+      <div class="card-footer">
+        <button class="btn btn-primary">
+          <i class="fa fa-share-square"></i> Save
+        </button>
+  </form>
+</div>
+</div>
+@endsection
